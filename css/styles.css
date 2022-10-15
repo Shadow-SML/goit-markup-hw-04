@@ -27,6 +27,14 @@ li {
   padding: 0px;
 }
 
+/* Save proportion of images!!! */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 body {
   background-color: var(--primary-white-color);
   color: var(--title-text-color);
@@ -63,10 +71,6 @@ body {
 
 /* Position containers */
 .container {
-  /* outline: 1px solid red; */
-  /* !!!!! Тимчасовий бекграунд!!!!!*/
-  /* background-color: rgb(173, 222, 189); */
-
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -148,8 +152,14 @@ body {
 
 .contacts-list {
   display: flex;
-  flex-shrink: 0;
+  flex-wrap: nowrap;
   gap: 50px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* leaves an active link */
@@ -169,6 +179,17 @@ body {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
+}
+
+/* svg mail, tel color  */
+.contacts-logo-icon {
+  fill: var(--secondary-text-color);
+}
+
+/* svg mail, tel hover, focus */
+.contacts-link:hover .contacts-logo-icon,
+.contacts-link:focus {
+  fill: var(--accent-color);
 }
 
 /* hero */
@@ -366,7 +387,6 @@ body {
 /* footer position*/
 .footer {
   padding: 60px 0;
-  max-height: 252px;
 }
 
 .footer-container {
@@ -447,7 +467,6 @@ body {
 }
 
 /* portfolio html position*/
-/* тимчасовий бекграунд */
 .card-list {
   display: flex;
   flex-wrap: wrap;
