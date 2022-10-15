@@ -10,6 +10,7 @@
   --logo-black-color: #000000;
   --header-separate-line: #ececec;
   --cards-border: #eeeeee;
+  --svg-grey-color: #afb1b8;
 }
 
 /* normalize */
@@ -374,6 +375,32 @@ body {
 
 .team-text {
   text-align: center;
+}
+
+/* clients section */
+.clients-link {
+  display: flex;
+  fill: var(--svg-grey-color);
+  width: 170px;
+  height: 92px;
+  border: solid 1px var(--svg-grey-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-link:hover {
+  border-color: var(--accent-color);
+}
+
+.clients-link:hover .clients-logo-icon,
+.clients-link:focus {
+  fill: var(--accent-color);
 }
 
 /* footer */
